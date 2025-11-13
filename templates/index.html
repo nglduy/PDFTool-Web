@@ -4,7 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PDF Tool - Simple PDF Operations</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <style>
+        /* Inline critical styles to ensure basic layout works even if CSS fails to load */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        header { text-align: center; margin-bottom: 40px; color: white; }
+        header h1 { font-size: 3rem; margin-bottom: 10px; }
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .tool-card { background: white; padding: 30px; border-radius: 15px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .btn { padding: 12px 24px; border: none; border-radius: 8px; font-size: 1rem; cursor: pointer; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -96,6 +112,19 @@
         </div>
     </div>
 
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="/static/js/script.js"></script>
+    <script>
+        // Inline fallback JavaScript to ensure basic functionality works
+        if (typeof showTool === 'undefined') {
+            function showTool(tool) {
+                document.querySelector('.tools-grid').style.display = 'none';
+                document.getElementById(tool + '-tool').style.display = 'block';
+            }
+            function hideTool() {
+                document.querySelector('.tools-grid').style.display = 'grid';
+                document.querySelectorAll('.tool-section').forEach(s => s.style.display = 'none');
+            }
+        }
+    </script>
 </body>
 </html>

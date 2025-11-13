@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Tool - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📄 PDF Tool</h1>
+            <p class="subtitle">Merge, Split, and Convert PDFs with ease</p>
+        </header>
+
+        <main>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">🔗</div>
+                    <h2>Merge PDFs</h2>
+                    <p>Combine multiple PDF files into one</p>
+                    <a href="/merge" class="btn">Get Started</a>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">✂️</div>
+                    <h2>Split PDF</h2>
+                    <p>Extract specific pages from a PDF</p>
+                    <a href="/split" class="btn">Get Started</a>
+                </div>
+
+                <div class="tool-card">
+                    <div class="tool-icon">🖼️</div>
+                    <h2>Images to PDF</h2>
+                    <p>Convert images to PDF pages</p>
+                    <a href="/convert" class="btn">Get Started</a>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Free and easy-to-use PDF tools</p>
+        </footer>
+    </div>
+</body>
+</html>

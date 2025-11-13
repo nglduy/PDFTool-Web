@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split PDF - PDF Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tools.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✂️ Split PDF</h1>
+            <p class="subtitle">Extract specific pages from a PDF</p>
+            <a href="/" class="back-link">← Back to Home</a>
+        </header>
+
+        <main>
+            <div class="tool-container">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📁</div>
+                    <p>Drag and drop a PDF file here or click to browse</p>
+                    <input type="file" id="fileInput" accept=".pdf" hidden>
+                    <button class="btn" onclick="document.getElementById('fileInput').click()">Choose File</button>
+                </div>
+
+                <div id="pageSelection" class="page-selection" style="display: none;">
+                    <h3>Select pages to extract:</h3>
+                    <p class="help-text">Enter page numbers or ranges (e.g., 1,3,5-7)</p>
+                    <input type="text" id="pageInput" placeholder="e.g., 1,3,5-7" class="page-input">
+                    <p id="pageInfo" class="page-info"></p>
+                </div>
+
+                <div id="actionButtons" class="action-buttons" style="display: none;">
+                    <button class="btn btn-primary" id="splitBtn">Split PDF</button>
+                    <button class="btn btn-secondary" id="clearBtn">Clear</button>
+                </div>
+
+                <div id="resultArea" class="result-area" style="display: none;">
+                    <div class="success-message">
+                        <span class="success-icon">✓</span>
+                        <p>PDF split successfully!</p>
+                        <button class="btn" id="downloadBtn">Download Split PDF</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/split.js') }}"></script>
+</body>
+</html>

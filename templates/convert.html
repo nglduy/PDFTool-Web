@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images to PDF - PDF Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tools.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🖼️ Images to PDF</h1>
+            <p class="subtitle">Convert images to PDF pages</p>
+            <a href="/" class="back-link">← Back to Home</a>
+        </header>
+
+        <main>
+            <div class="tool-container">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📁</div>
+                    <p>Drag and drop images here or click to browse</p>
+                    <input type="file" id="fileInput" accept="image/*" multiple hidden>
+                    <button class="btn" onclick="document.getElementById('fileInput').click()">Choose Images</button>
+                </div>
+
+                <div id="imagePreview" class="image-preview"></div>
+
+                <div id="actionButtons" class="action-buttons" style="display: none;">
+                    <button class="btn btn-primary" id="convertBtn">Convert to PDF</button>
+                    <button class="btn btn-secondary" id="clearBtn">Clear All</button>
+                </div>
+
+                <div id="resultArea" class="result-area" style="display: none;">
+                    <div class="success-message">
+                        <span class="success-icon">✓</span>
+                        <p>Images converted successfully!</p>
+                        <button class="btn" id="downloadBtn">Download PDF</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/convert.js') }}"></script>
+</body>
+</html>

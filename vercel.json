@@ -8,10 +8,6 @@
   ],
   "routes": [
     {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
       "src": "/(.*)",
       "dest": "app.py"
     }
@@ -23,6 +19,5 @@
     "app.py": {
       "maxDuration": 30
     }
-  },
-  "outputDirectory": "."
+  }
 }

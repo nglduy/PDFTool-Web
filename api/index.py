@@ -183,5 +183,6 @@ def parse_page_numbers(pages_str, total_pages):
     return pages
 
 # This is required for Vercel
+# Note: debug=True is only for local development and is not used in Vercel production
 if __name__ == '__main__':
     app.run(debug=True)

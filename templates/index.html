@@ -4,7 +4,15 @@
 
 {% block content %}
 <!-- Hero Section -->
-<div class="hero-section">
+<div class="hero-section hero-with-bg">
+    <style>
+        .hero-with-bg {
+            background-image: linear-gradient(rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8)), url('{{ url_for('static', filename='images/hero-background.jpg') }}');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
     <div class="hero-content">
         <div class="hero-text">
             <h1 class="hero-title">Professional PDF & Image Tools</h1>

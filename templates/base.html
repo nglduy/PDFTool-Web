@@ -18,9 +18,9 @@
             <nav class="main-nav">
                 <ul>
                     <li><a href="{{ url_for('index') }}" class="nav-link">Home</a></li>
-                    <li><a href="#merge" class="nav-link">Merge</a></li>
-                    <li><a href="#split" class="nav-link">Split</a></li>
-                    <li><a href="#convert" class="nav-link">Convert</a></li>
+                    <li><a href="{{ url_for('image_tool') }}" class="nav-link">Image Tool</a></li>
+                    <li><a href="{{ url_for('pdf_tool') }}" class="nav-link">PDF Tool</a></li>
+                    <li><a href="{{ url_for('about') }}" class="nav-link">About</a></li>
                 </ul>
             </nav>
         </div>
@@ -48,11 +48,11 @@
                 </div>
                 
                 <div class="footer-section">
-                    <h4>Features</h4>
+                    <h4>Tools</h4>
                     <ul class="footer-links">
-                        <li><a href="#merge">PDF Merge</a></li>
-                        <li><a href="#split">PDF Split</a></li>
-                        <li><a href="#convert">Image to PDF</a></li>
+                        <li><a href="{{ url_for('pdf_tool') }}">PDF Tools</a></li>
+                        <li><a href="{{ url_for('image_tool') }}">Image Tools</a></li>
+                        <li><a href="{{ url_for('about') }}">About</a></li>
                     </ul>
                 </div>
                 

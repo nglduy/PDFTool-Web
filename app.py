@@ -49,6 +49,18 @@ def parse_page_ranges(page_ranges_str, total_pages):
 def index():
     return render_template('index.html')
 
+@app.route('/pdf-tool')
+def pdf_tool():
+    return render_template('pdftool.html')
+
+@app.route('/image-tool')
+def image_tool():
+    return render_template('imagetool.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
 @app.route('/health')
 def health():
     return jsonify({'status': 'healthy', 'message': 'PDF Tool is running'})

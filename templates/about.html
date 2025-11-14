@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+
+{% block title %}About - Dylan Ng{% endblock %}
+
+{% block content %}
+<div class="about-container">
+    <!-- Profile Section -->
+    <div class="profile-section">
+        <div class="profile-card">
+            <div class="profile-image">
+                <div class="avatar">DN</div>
+            </div>
+            <div class="profile-info">
+                <h1>Dylan Ng</h1>
+                <p class="title">Developer & Creator</p>
+                <p class="email">📧 nglduy@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Content -->
+    <div class="about-content">
+        <div class="content-section">
+            <h2>About This Project</h2>
+            <p>Welcome! I'm Dylan Ng, and I created this PDF and Image tool collection to provide simple, secure, and efficient document processing solutions. These tools are designed with privacy and usability in mind.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Why I Built This</h2>
+            <div class="reasons-grid">
+                <div class="reason-item">
+                    <div class="reason-icon">🔒</div>
+                    <h3>Privacy First</h3>
+                    <p>All processing happens locally on your device. Your files never leave your computer, ensuring complete privacy and security.</p>
+                </div>
+                
+                <div class="reason-item">
+                    <div class="reason-icon">💰</div>
+                    <h3>Free & Open</h3>
+                    <p>No subscriptions, no hidden fees. These tools are completely free to use without any limitations or watermarks.</p>
+                </div>
+                
+                <div class="reason-item">
+                    <div class="reason-icon">⚡</div>
+                    <h3>Fast & Efficient</h3>
+                    <p>Optimized algorithms ensure quick processing without compromising on quality or functionality.</p>
+                </div>
+                
+                <div class="reason-item">
+                    <div class="reason-icon">🌐</div>
+                    <h3>Works Everywhere</h3>
+                    <p>Cross-platform compatibility means it works on Windows, Mac, Linux, and mobile devices.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Features</h2>
+            <div class="features-list">
+                <div class="feature-category">
+                    <h3>📄 PDF Tools</h3>
+                    <ul>
+                        <li>Merge multiple PDF files into one</li>
+                        <li>Split PDFs by selecting specific pages</li>
+                        <li>Convert images (JPG, PNG, etc.) to PDF</li>
+                        <li>Drag & drop interface for easy file handling</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-category">
+                    <h3>🖼️ Image Tools</h3>
+                    <ul>
+                        <li>Compress images while maintaining quality</li>
+                        <li>Support for multiple formats (JPEG, PNG, WebP)</li>
+                        <li>Batch processing capabilities</li>
+                        <li>Customizable compression settings</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Technical Details</h2>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <h4>Backend</h4>
+                    <p>Python with Flask framework</p>
+                </div>
+                <div class="tech-item">
+                    <h4>PDF Processing</h4>
+                    <p>PyPDF2 library</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Image Processing</h4>
+                    <p>Pillow (PIL) library</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Frontend</h4>
+                    <p>HTML5, CSS3, JavaScript</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Deployment</h4>
+                    <p>Vercel serverless platform</p>
+                </div>
+                <div class="tech-item">
+                    <h4>Offline Support</h4>
+                    <p>Portable executable scripts</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Contact & Feedback</h2>
+            <div class="contact-info">
+                <p>I'm always looking to improve these tools and add new features. If you have suggestions, bug reports, or just want to say hello, feel free to reach out:</p>
+                
+                <div class="contact-methods">
+                    <div class="contact-item">
+                        <span class="contact-icon">📧</span>
+                        <div>
+                            <h4>Email</h4>
+                            <p><a href="mailto:nglduy@gmail.com">nglduy@gmail.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">💡</span>
+                        <div>
+                            <h4>Feedback</h4>
+                            <p>Ideas for new features or improvements</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <span class="contact-icon">🐛</span>
+                        <div>
+                            <h4>Bug Reports</h4>
+                            <p>Help me fix issues and improve the tools</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Future Plans</h2>
+            <div class="roadmap">
+                <div class="roadmap-item">
+                    <h4>🔄 More PDF Features</h4>
+                    <p>Password protection, watermarks, and metadata editing</p>
+                </div>
+                <div class="roadmap-item">
+                    <h4>🎨 Advanced Image Tools</h4>
+                    <p>Resizing, format conversion, and basic editing features</p>
+                </div>
+                <div class="roadmap-item">
+                    <h4>📊 Document Analytics</h4>
+                    <p>File size analysis and optimization suggestions</p>
+                </div>
+                <div class="roadmap-item">
+                    <h4>🌙 Dark Mode</h4>
+                    <p>Theme options for better user experience</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="appreciation-section">
+    <div class="appreciation-card">
+        <h3>Thank You! 🙏</h3>
+        <p>Thank you for using these tools. Your feedback and support help make them better for everyone.</p>
+        <div class="cta-buttons">
+            <a href="{{ url_for('pdf_tool') }}" class="btn btn-primary">Try PDF Tools</a>
+            <a href="{{ url_for('image_tool') }}" class="btn btn-secondary">Try Image Tools</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

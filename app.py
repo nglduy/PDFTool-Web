@@ -246,5 +246,5 @@ def convert_images_to_pdf():
     except Exception as e:
         return jsonify({'success': False, 'error': f'Server error: {str(e)}'})
 
-# if __name__ == '__main__':
-#     app.run(debug=True)
+if __name__ == '__main__':
+    app.run(debug=True)

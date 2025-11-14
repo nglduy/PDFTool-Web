@@ -47,7 +47,27 @@ def parse_page_ranges(page_ranges_str, total_pages):
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    from flask import make_response
+    response = make_response(render_template('index.html'))
+    response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+    response.headers['Pragma'] = 'no-cache'
+    response.headers['Expires'] = '0'
+    return response
+
+@app.route('/favicon.ico')
+def favicon():
+    # Return a simple 1x1 pixel transparent favicon to stop 404 errors
+    from flask import Response
+    import base64
+    # 1x1 transparent PNG
+    favicon_data = base64.b64decode(b'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==')
+    return Response(favicon_data, mimetype='image/png')
+
+@app.route('/static/<path:path>')
+def static_fallback(path):
+    # Return 404 for any static file requests with proper headers
+    from flask import abort
+    abort(404)
 
 @app.route('/health')
 def health():

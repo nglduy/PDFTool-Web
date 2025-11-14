@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}PDF Tool - Simple PDF Operations{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <h1><a href="{{ url_for('index') }}">PDF Tool</a></h1>
+                <p class="tagline">Simple and user-friendly PDF operations</p>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="{{ url_for('index') }}" class="nav-link">Home</a></li>
+                    <li><a href="#merge" class="nav-link">Merge</a></li>
+                    <li><a href="#split" class="nav-link">Split</a></li>
+                    <li><a href="#convert" class="nav-link">Convert</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>PDF Tool</h4>
+                    <p>Simple and powerful PDF operations for everyone.</p>
+                    <p class="footer-features">
+                        <span class="feature-tag">✨ Merge PDFs</span>
+                        <span class="feature-tag">✂️ Split PDFs</span>
+                        <span class="feature-tag">🖼️ Images to PDF</span>
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Features</h4>
+                    <ul class="footer-links">
+                        <li><a href="#merge">PDF Merge</a></li>
+                        <li><a href="#split">PDF Split</a></li>
+                        <li><a href="#convert">Image to PDF</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Info</h4>
+                    <ul class="footer-links">
+                        <li>🔒 Secure Processing</li>
+                        <li>⚡ Fast Operations</li>
+                        <li>📱 Mobile Friendly</li>
+                        <li>🌐 Works Offline</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 PDF Tool. Built with ❤️ using Python & Flask.</p>
+                <p class="version">Version 1.0 - Free to use</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading overlay -->
+    <div id="loading" style="display: none;">
+        <div class="loading-spinner">
+            <p>Processing...</p>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

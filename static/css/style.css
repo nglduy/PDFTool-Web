@@ -423,10 +423,10 @@ body {
 }
 
 .hero-fullwidth {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
+    width: 100%;
     padding: 100px 20px !important;
     text-align: center;
+    margin-bottom: 60px;
 }
 
 .hero-content-centered {

@@ -4,42 +4,23 @@
 
 {% block content %}
 <!-- Hero Section -->
-<div class="hero-section hero-with-bg">
+<div class="hero-section hero-fullwidth">
     <style>
-        .hero-with-bg {
+        .hero-fullwidth {
             background-image: linear-gradient(rgba(102, 126, 234, 0.8), rgba(118, 75, 162, 0.8)), url('{{ url_for('static', filename='images/hero-background.jpg') }}');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+            margin: 0 -20px;
+            padding: 100px 20px;
         }
     </style>
-    <div class="hero-content">
-        <div class="hero-text">
-            <h1 class="hero-title">Professional PDF & Image Tools</h1>
-            <p class="hero-subtitle">Transform your documents and images with powerful, easy-to-use tools. Fast, secure, and completely free.</p>
-            <div class="hero-buttons">
-                <a href="{{ url_for('pdf_tool') }}" class="btn btn-primary btn-large">PDF Tools</a>
-                <a href="{{ url_for('image_tool') }}" class="btn btn-secondary btn-large">Image Tools</a>
-            </div>
-        </div>
-        <div class="hero-image">
-            <div class="hero-visual">
-                <div class="floating-card">
-                    <div class="card-icon">📄</div>
-                    <h4>PDF Tools</h4>
-                    <p>Merge, split & convert</p>
-                </div>
-                <div class="floating-card">
-                    <div class="card-icon">🖼️</div>
-                    <h4>Image Tools</h4>
-                    <p>Compress & optimize</p>
-                </div>
-                <div class="floating-card">
-                    <div class="card-icon">⚡</div>
-                    <h4>Fast & Secure</h4>
-                    <p>Process locally</p>
-                </div>
-            </div>
+    <div class="hero-content-centered">
+        <h1 class="hero-title">Professional PDF & Image Tools</h1>
+        <p class="hero-subtitle">Transform your documents and images with powerful, easy-to-use tools. Fast, secure, and completely free.</p>
+        <div class="hero-buttons">
+            <a href="{{ url_for('pdf_tool') }}" class="btn btn-primary btn-large">PDF Tools</a>
+            <a href="{{ url_for('image_tool') }}" class="btn btn-secondary btn-large">Image Tools</a>
         </div>
     </div>
 </div>

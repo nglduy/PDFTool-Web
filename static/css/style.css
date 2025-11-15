@@ -422,6 +422,21 @@ body {
     pointer-events: none;
 }
 
+.hero-fullwidth {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 100px 20px !important;
+    text-align: center;
+}
+
+.hero-content-centered {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
 .hero-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1087,6 +1102,14 @@ body {
         grid-template-columns: 1fr;
         gap: 40px;
         text-align: center;
+    }
+    
+    .hero-content-centered {
+        padding: 0 10px;
+    }
+    
+    .hero-fullwidth {
+        padding: 80px 10px !important;
     }
     
     .hero-title {
